@@ -1,78 +1,95 @@
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://project-themes.netlify.app/boot-theme/style.css">
 <link rel="stylesheet" href="css/style.css">
 
+
 <header>
-    <nav class="navbar">
-        <a class="brand nav-item" href="index.html" style="text-decoration:none;">Home</a>
+    <nav class="navbar nav-local">
+        <div class="navbar-brand">
+            <div class="navbar-brand-logo">
+                <a href="index.html"> <img class="logo" src="images/logo.png" alt="logo-icon"></a>
 
-        <a class="nav-item" href="login.html" style="text-decoration:none;"  data-loggedin="false"> Login</a>
+            </div>
+        </div>
 
-        <a class="nav-item" href="register.html" style="text-decoration:none;" data-loggedin="false"> Register</a>
+        <ul class="navbar-nav">
+            <a class="brand nav-item" href="index.html" style="text-decoration:none;">Home</a>
 
-        <a class="nav-item" href="add_train_adm.html" style="text-decoration:none;" data-loggedin="true" data-role="admin"> Add Trains</a>
+            <a class="nav-item" href="add_train_adm.html" style="text-decoration:none;" data-loggedin="true" data-role="admin"> Add Trains</a>
 
-        <a class="nav-item" href="list_train_adm.html" style="text-decoration:none;" data-loggedin="true" data-role="admin"> List Train</a>
+            <a class="nav-item" href="list_train_adm.html" style="text-decoration:none;" data-loggedin="true" data-role="admin"> List Train</a>
 
-        <a class="nav-item" href="list_users_adm.html" style="text-decoration:none;" data-loggedin="true" data-role="admin"> List Users</a>
+            <a class="nav-item" href="list_users_adm.html" style="text-decoration:none;" data-loggedin="true" data-role="admin"> List Users</a>
 
-        <a class="nav-item" href="booking_list_adm.html" style="text-decoration:none;" data-loggedin="true" data-role="admin"> Booking List</a>
+            <a class="nav-item" href="booking_list_adm.html" style="text-decoration:none;" data-loggedin="true" data-role="admin"> Booking List</a>
 
-        <a class="nav-item" href="list_train.html" style="text-decoration:none;" data-loggedin="true" data-role="user"> List Train</a>
+            <a class="nav-item" href="list_train.html" style="text-decoration:none;" data-loggedin="true" data-role="user"> List Train</a>
 
-        <a class="nav-item" href="booking.html" style="text-decoration:none;" data-loggedin="true" data-role="user">Booking</a>
+            <a class="nav-item" href="booking.html" style="text-decoration:none;" data-loggedin="true" data-role="user">Booking</a>
 
-        <a class="nav-item" href="booking_list.html" style="text-decoration:none;" data-loggedin="true" data-role="user">Booking List</a>
-        <!-- <a class="nav-item" href="addtask.html" style="text-decoration:none;"> Tasks</a>
+            <a class="nav-item" href="booking_list.html" style="text-decoration:none;" data-loggedin="true" data-role="user">Booking List</a>
+            <!-- <a class="nav-item" href="addtask.html" style="text-decoration:none;"> Tasks</a>
         <a class="nav-item" href="list_task.html" style="text-decoration:none;">Task-List</a>
         <a class="nav-item" href="edit_task.html" style="text-decoration:none;">Task-Edit</a> -->
-        <a class="nav-item" href="aboutus.html" style="text-decoration:none;"> About Us</a>
-       
+            <a class="nav-item" href="aboutus.html" style="text-decoration:none;"> About Us</a></ul>
+        <ul class="navbar-pull-right">
+            <a class="nav-item" href="login.html" style="text-decoration:none;" data-loggedin="false"> Login</a>
+
+            <a class="nav-item" href="register.html" style="text-decoration:none;" data-loggedin="false"> Register</a>
+
+        </ul>
+
+
+
         <a class="welcome nav-item" id="loggedIn" data-loggedin="true"></a>
+
         <a class="logout nav-item" href="#" style="text-decoration:none; margin-right: 0;" onclick="logout()" data-loggedin="true"> LogOut</a>
 
-        
-        
+
+
     </nav>
     <script src="js/jquery.min.js"></script>
     <script src="js/_header.js"></script>
 
-    
-<script>
 
-    let userStatus = JSON.parse(localStorage.getItem("Logged_in_users"));
-    
-if (userStatus != null) {
-    // localStorage.setItem("isLoggedIn",JSON.stringify(true))
-    $(".nav-item[data-loggedin='true']").show();
-    $(".nav-item[data-loggedin='false']").hide();
-    // $("#profile").html("Welcome " + user.email + "!!!");
+    <script>
+        let userStatus = JSON.parse(localStorage.getItem("Logged_in_users"));
 
-    if (userStatus.role == 'user') {
+        if (userStatus != null) {
+            // localStorage.setItem("isLoggedIn",JSON.stringify(true))
+            $(".nav-item[data-loggedin='true']").show();
+            $(".nav-item[data-loggedin='false']").hide();
+            // $("#profile").html("Welcome " + user.email + "!!!");
+
+            if (userStatus.role == 'user') {
+                $(".nav-item[data-role='admin']").hide();
+            }
+
+            if (userStatus.role == 'admin') {
+                $(".nav-item[data-role='user']").hide();
+            }
+        } else {
+            // alert("hi")
+            // localStorage.setItem("isLoggedIn",JSON.stringify(false))
+            $(".nav-item[data-loggedin='true'] ").hide();
+            $(".nav-item[data-loggedin='false']").show();
+            $(".nav-item[data-role='user']").hide();
             $(".nav-item[data-role='admin']").hide();
         }
 
-if (userStatus.role == 'admin') {
-    $(".nav-item[data-role='user']").hide();
-}
-} 
+        function logout() {
+            localStorage.removeItem("Logged_in_users");
 
-else {
-    // alert("hi")
-    // localStorage.setItem("isLoggedIn",JSON.stringify(false))
-    $(".nav-item[data-loggedin='true'] ").hide();
-    $(".nav-item[data-loggedin='false']").show();
-    $(".nav-item[data-role='user']").hide();
-    $(".nav-item[data-role='admin']").hide();
-}
-
-function logout() {
-    localStorage.removeItem("Logged_in_users");
-
-    // localStorage.clear();
-    window.location.href = "login.html";
-}
+            // localStorage.clear();
+            window.location.href = "login.html";
+        }
 
 
-function checkLogin() {
+        function checkLogin() {
             let userStr = localStorage.getItem("Logged_in_users");
             let user = userStr != null ? JSON.parse(userStr) : null;
             if (user != null) {
@@ -84,9 +101,8 @@ function checkLogin() {
 
         }
         checkLogin();
+    </script>
 
-</script>
+    <script src="js/routes.js"></script>
 
-<script src="js/routes.js"></script>
-
-    </header>
+</header>

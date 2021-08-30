@@ -3,64 +3,58 @@
 
 <head>
     <title>Train Ticket Booking</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header id="header"></header>
-    <h1 style="font-size:30px;color:red;text-align:center;">Train Ticket Booking</h1>
-    <hr>
-    <img src="images/train.png" alt="IRCTC Image" height="50px" width="50px">
-    <h2>About Us</h2>
+    <section class="about-section">
+        <h1>Train Ticket Booking</h1>
+        <hr>
+        <img src="images/train.png" alt="IRCTC Image" height="50px" width="50px">
+        <h2>About Us</h2> <br>
 
-    <p>Indian Railway Catering and Tourism Corporation Ltd.This company is a “Mini Ratna (Category-I)” Central Public
-        Sector Enterprise under Ministry of Railways, Government of India. This was incorporated on 27 th September,
-        1999 as an extended arm of the Indian Railways to upgrade, professionalize and manage the catering and
-        hospitality services at stations, on trains and other locations and to promote domestic and international
-        tourism through development of budget hotels, special tour packages, information & commercial publicity and
-        global reservation systems. The authorized capital of the company is 250 crores and paid up capital is 160
-        crores, fully subscribed by Ministry of Railways, Government of India. It’s registered and Corporate Office is
-        situated at New Delhi.</p>
-    <hr>
+        <p>Indian Railway Catering and Tourism Corporation Ltd.This company is a “Mini Ratna (Category-I)” Central Public Sector Enterprise under Ministry of Railways, Government of India. This was incorporated on 27 th September, 1999 as an extended arm
+            of the Indian Railways to upgrade, professionalize and manage the catering and hospitality services at stations, on trains and other locations and to promote domestic and international tourism through development of budget hotels, special
+            tour packages, information & commercial publicity and global reservation systems. The authorized capital of the company is 250 crores and paid up capital is 160 crores, fully subscribed by Ministry of Railways, Government of India. It’s registered
+            and Corporate Office is situated at New Delhi.</p> <br>
+        <hr> <br>
 
-    <p style="font-size:20px;color:blue;"><strong>The core activities of the Company are detailed below:</strong></p>
-    <ul>
-        <li>Catering & Hospitality</li>
-        <li>Internet Ticketing</li>
-        <li>Travel &Tourism</li>
-        <li>Packaged Drinking Water (Rail Neer)</li>
-    </ul>
-    <hr>
+        <p style="font-size:20px;color:blue;"><strong>The core activities of the Company are detailed below:</strong></p> <br>
+        <ul>
+            <li>Catering & Hospitality</li>
+            <li>Internet Ticketing</li>
+            <li>Travel &Tourism</li>
+            <li>Packaged Drinking Water (Rail Neer)</li>
+        </ul> <br>
+        <hr> <br>
 
-    <p style="font-size:20px;color:blue;"><strong>At present, the Company operates through:</strong></p>
-    <ul>
-        <li>Fourteen Rail Neer Plants at Nangloi-Delhi, Danapur-Bihar, Palur-Tamil Nadu, Ambernath-Maharashtra, Amethi
-            (Uttar Pradesh), Parassala-, Tamil Nadu, Bilaspur (Chhatisgarh) Hapur (Uttar Pradedh), Sanand- Gujaratd,
-            Mandideep-Madhya Pradesh, Jagiroad-Assam, Maneri-(Madhya Pradesh), Nagpur, (Maharashtra) and
-            Sankrail-Kolkatta</li>
-        <li>11 Base Kitchens at located at New Delhi, Howrah, Ahmedabad, Patna, Mumbai Central, Mumbai CST, Ballarshah,
-            Nagpur, Balasore, Sealdah and Kharagpur Jn 5 Zonal Offices, namely, New Delhi, Mumbai, Kolkata, Chennai,
-            Secundrabad;</li>
-        <li>Five Zonal Offices at New Delhi, Mumbai, Kolkata, Chennai & Secundrabad</li>
-        <li>Ten Regional Offices at Lucknow, Chandigarh, Jaipur, Bhopal, Ahmadabad, Guwahati, Bhubaneswar, Patna,
-            Ernakulam and Bangalore;</li>
-        <li>One Internet Ticketing Office at New Delhi</li>
-        <li>One Tourism office at New Delhi.</li>
-    </ul>
-    <hr>
+        <p style="font-size:20px;color:blue;"><strong>At present, the Company operates through:</strong></p> <br>
+        <ul>
+            <li>Fourteen Rail Neer Plants at Nangloi-Delhi, Danapur-Bihar, Palur-Tamil Nadu, Ambernath-Maharashtra, Amethi (Uttar Pradesh), Parassala-, Tamil Nadu, Bilaspur (Chhatisgarh) Hapur (Uttar Pradedh), Sanand- Gujaratd, Mandideep-Madhya Pradesh, Jagiroad-Assam,
+                Maneri-(Madhya Pradesh), Nagpur, (Maharashtra) and Sankrail-Kolkatta
+            </li>
+            <li>11 Base Kitchens at located at New Delhi, Howrah, Ahmedabad, Patna, Mumbai Central, Mumbai CST, Ballarshah, Nagpur, Balasore, Sealdah and Kharagpur Jn 5 Zonal Offices, namely, New Delhi, Mumbai, Kolkata, Chennai, Secundrabad;
+            </li>
+            <li>Five Zonal Offices at New Delhi, Mumbai, Kolkata, Chennai & Secundrabad</li>
+            <li>Ten Regional Offices at Lucknow, Chandigarh, Jaipur, Bhopal, Ahmadabad, Guwahati, Bhubaneswar, Patna, Ernakulam and Bangalore;</li>
+            <li>One Internet Ticketing Office at New Delhi</li>
+            <li>One Tourism office at New Delhi.</li>
+        </ul> <br>
+        <hr> <br>
 
-    <button><a href="index.html" style="text-decoration:none;">Home</a>
-</body></button>
+        <button class="btn btn-primary"><a href="index.html" style="text-decoration:none;">Home</a>
+</body></button></section>
 
 
-<script src="js/jquery.min.js"></script>
-<script>
-    let userData = localStorage.getItem("Logged_in_users");
-    let user = JSON.parse(userData);
-    console.log(user);
-    
-    $("#header").load("_header.html")
-   
-</script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        let userData = localStorage.getItem("Logged_in_users");
+        let user = JSON.parse(userData);
+        console.log(user);
+
+        $("#header").load("_header.html")
+    </script>
 </body>
 
 </html>

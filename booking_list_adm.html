@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Details</title>
-    <link rel="stylesheet" href="assets/css/table.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    
+
     <!-- axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -20,29 +20,31 @@
         <!--append-->
     </header>
     <main>
-        <h2>Booking Details</h2>
-        
-        <section>
-            <table class="booking_list">                
-                <caption><strong> Booking List</strong></caption><br><br>
-                <thead>
-                    <tr>
-                        <th id="sno">#</th>
-                        <th id="trainNo">Train No</th>
-                        <th id="trainName">Train Name</th>
-                        <th id="fromStation">From Station</th>
-                        <th id="toStation">To Station</th>
-                        <th id="noTicket">No of Tickets</th>
-                        <th id="journeyDate">Journey Date</th>
-                        <th id="ticketAmount">Ticket Amount</th>
-                        <th id="status">Total</th>
-                        <th id="userid">User Name</th>
-                        <th id="email">Email ID</th>
-                        <th id="action">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="abc">
-                    <!-- <tr>
+        <section class="booking-list-admin-section">
+            <h2>Booking Details</h2>
+
+            <section>
+                <div style="overflow-x:auto;">
+                    <table class="table table-bordered table-hover">
+                        <caption><strong> Booking List</strong></caption><br><br>
+                        <thead>
+                            <tr class="table-primary">
+                                <th id="sno">#</th>
+                                <th id="trainNo">Train No</th>
+                                <th id="trainName">Train Name</th>
+                                <th id="fromStation">From Station</th>
+                                <th id="toStation">To Station</th>
+                                <th id="noTicket">No of Tickets</th>
+                                <th id="journeyDate">Journey Date</th>
+                                <th id="ticketAmount">Ticket Amount</th>
+                                <th id="status">Total</th>
+                                <th id="userid">User Name</th>
+                                <th id="email">Email ID</th>
+                                <th id="action">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="abc">
+                            <!-- <tr>
                         <td>1</td>
                         <td>12345</td>
                         <td>Purl City Super Fast Express</td>
@@ -53,18 +55,18 @@
                         <td>Waiting List</td>
                         <td><a href="#">Cancel</a></td>
                     </tr> -->
-                </tbody>
-            </table>
+                        </tbody>
+                    </table>
+                </div>
 
-            <br>
-            <br>
 
+            </section>
         </section>
     </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/bookservice.js"></script>
     <script src="js/booking_list_adm.js"></script>
-    
+
 </body>
 
 </html>

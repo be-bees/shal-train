@@ -6,38 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User login</title>
- 
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <header id="header"></header>
-    <h2>User Login Page</h2>
-    <form onsubmit="loginPage();">
-
-        <div class="row">
-        <label for="email">Email: <span style="color:red">*</span></label>
-        <input type="email" name="email" id="email" placeholder="Enter email" pattern="[a-z0-9._]+@[a-z.]+\.[a-z]{2,3}$" required>
-         <br /><br />
-        <label for="password">Password: <span style="color:red">*</span></label>
-        <input type="password" name="password" id="password" placeholder="Enter password" required>
-        <br /> <br />
-        <label for="role">Role: <span style="color:red">*</span></label>
-        <input type="radio" name="role" id="role" value="admin" required>Admin
-        <input type="radio" name="role" id="role" value="user" required>User<br />
-        <br />
-        <br />
-        <button>Submit</button>
-        <button><a href="index.html" style="text-decoration:none;">Home</a></button>
+    <section class="login-section form-container">
+        <div class="form-title">
+            <h2>User Login Page</h2>
         </div>
-        
-        <p style="text-align: center;">Don't Have an Account? <a href="register.html">Sign-Up</a></p> <br /><br /> <br />
-    </form>
+
+        <form onsubmit="loginPage();">
+
+            <div class="row">
+                <label for="email">Email: <span style="color:red">*</span></label>
+                <input class="form-control" type="email" name="email" id="email" placeholder="Enter email" pattern="[a-z0-9._]+@[a-z.]+\.[a-z]{2,3}$" required>
+
+                <label for="password">Password: <span style="color:red">*</span></label>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Enter password" required>
+
+                <label for="role">Role: <span style="color:red">*</span></label>
+                <input type="radio" name="role" id="role" value="admin" required>Admin
+                <input type="radio" name="role" id="role" value="user" required>User
+                <br>
+                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-light"><a href="index.html" style="text-decoration:none;">Home</a></button>
+            </div>
+
+            <p style="text-align: center;">Don't Have an Account? <a class="a-link a-secondary-hover" href="register.html">Sign-Up</a></p>
+        </form>
+    </section>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/userservice.js"></script>
     <script src="js/validator.js"></script>
     <script src="js/login.js"></script>
-    
+
 </body>

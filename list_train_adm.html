@@ -8,9 +8,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/table.css">
 
-    
-     <!-- axios -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
 
@@ -20,64 +20,71 @@
         <!--append-->
     </header>
     <main>
-        <h2>List Trains</h2>
-        <div>
+        <section class="list-train-admin-section">
+            <div class="form-container">
+                <div class="form-title">
+                    <h2>List Trains</h2>
+                </div>
+                <div>
 
-            <form onsubmit="abc()">
+                    <form onsubmit="abc()">
 
-            <label for="sourceStationSearch"><strong>Source Station</strong></label>
-            <select name="sourceStationSearch" id="sourceStationSearch" class="sourceStationSearch">
-
-            </select>
-
-            <label for="destinationStationSearch"><strong>Destination Station</strong></label>
-            
-            <select name="destinationStationSearch" id="destinationStationSearch" class="destinationStationSearch">
+                        <label for="sourceStationSearch"><strong>Source Station</strong></label>
+                        <select class="form-control" name="sourceStationSearch" id="sourceStationSearch" class="sourceStationSearch">
 
             </select>
-            <button type="submit">Search</button>
-        </form>
-        </div>
-        <br><br>
-        <section>
-            <form>
-            <table class="listTrainAdm" >
-                <caption><strong> Train List</strong></caption>
-                <thead>
-                    <tr>
-                        <th id="sno">S.No</th>
-                        <th id="trainNo">Train No</th>
-                        <th id="name">Train Name</th>
-                        <th id="noPassengers">No of passengers Allowed</th>
-                        <th id="source">Source Station</th>
-                        <th id="destination">Destination Station</th>
-                        <th id="startTime">Start Time</th>
-                        <th id="endTime">End Time</th>
-                        <th id="duration">Duration</th>
-                        <th id="price">Ticket Price</th>
-                        <th id="stations">Stations</th>
-                        <th id="action">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="listTrainDataAdm">
-                    
-                </tbody>
-            </table>
-            <br>
-            <br>
 
-        </form>
+                        <label for="destinationStationSearch"><strong>Destination Station</strong></label>
 
-            <button><a href="add_train_adm.html" style="text-decoration:none;" data-toggle="modal"
+                        <select class="form-control" name="destinationStationSearch" id="destinationStationSearch" class="destinationStationSearch">
+
+            </select>
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+            <br><br>
+            <section class="user-admin-table">
+                <div style="overflow-x:auto;">
+                    <table class="table table-bordered  table-hover">
+                        <caption><strong> Train List</strong></caption>
+                        <thead>
+                            <tr class="table-primary">
+                                <th id="sno">S.No</th>
+                                <th id="trainNo">Train No</th>
+                                <th id="name">Train Name</th>
+                                <th id="noPassengers">No of passengers Allowed</th>
+                                <th id="source">Source Station</th>
+                                <th id="destination">Destination Station</th>
+                                <th id="startTime">Start Time</th>
+                                <th id="endTime">End Time</th>
+                                <th id="duration">Duration</th>
+                                <th id="price">Ticket Price</th>
+                                <th id="stations">Stations</th>
+                                <th id="action">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listTrainDataAdm">
+
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <br>
+
+
+
+                <button class="btn btn-primary first-btn"><a href="add_train_adm.html" style="text-decoration:none;" data-toggle="modal"
                     data-target="#modelId">Add Trains</a></button>
-            <button><a href="index.html" style="text-decoration:none;">Home</a></button>
+                <button class="btn btn-light"><a href="index.html" style="text-decoration:none;">Home</a></button>
 
+            </section>
         </section>
     </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/trainservice.js"></script>
     <script src="js/list_train_adm.js"></script>
-    
+
 </body>
 
 </html>

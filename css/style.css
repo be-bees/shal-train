@@ -1,138 +1,303 @@
-:root {
-    --backgroundColor: lightyellow;
-    --headerBackgroundColor: #364150;
-    --headerColor:white;
-    --brandColor:white;
-    --menuLinkColor: white;
+/* --------------home---------------- */
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
-
-body {
-  font-family: Roboto, sans-serif;
-  /* background-color: lightyellow; */
-  background-color: rgb(225, 233, 236);
-  margin: 20px;
-  padding: 20px;
-  
-}
-button{
-  margin: 0px auto;
-  background: none;
-  color: inherit;
-  outline: inherit;
-  border-radius: 5px;
-  /* background-color: #a4bcdd;
-  color: white; */
-
-
-}
 header {
-  /* background-color: #364150; */
-  background-color: var(--headerBackgroundColor);
-  color: var(--headerColor);
-  padding: 10px;
+    position: fixed;
+    top: 0;
+}
+
+.welcome {
+    margin-left: 22%;
+    margin-right: 0;
+    margin-top: 35px;
+}
+
+.train-home {
+    margin-top: 8%;
+}
+
+.train-home h1 {
+    margin-top: 9%;
+    font-size: 30px;
+    color: #325B80;
+    text-align: center;
+}
+
+.essay-home {
+    display: flex;
+    margin: 2%;
+}
+
+.essay-home p {
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+hr {
+    width: 10%;
+    margin-left: 45%;
+    margin-top: 1%;
+}
+
+.features-list {
+    background-color: #FFFFFF;
+    margin: 2% 30%;
+    padding: 2% 5% 2%;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #325B80;
+}
+
+.features-list p {
+    font-size: 20px;
+}
+
+.features-list li {
+    list-style-type: none;
+}
+
+.features-list li a {
+    color: #325B80;
+    font-size: 18px;
+}
+
+.features-list button {
+    margin-left: 40%;
+}
+
+.features-list button a {
+    color: #FFFFFF;
 }
 
 
-footer {
-  /* background-color: #364150; */
-  background-color: var(--headerBackgroundColor);
-  color: whitesmoke;
-  text-decoration: none;
-  padding: 25px;
+/* -------------------------about us---------------- */
+
+.about-section {
+    margin: 10% 5%;
 }
 
-.login_form{
-    margin: 20px;
-    padding: 20px;
+.about-section h1 {
+    margin-top: 9%;
+    font-size: 30px;
+    color: #325B80;
+    text-align: center;
 }
 
-.navbar {
-    margin: 10px;
-    padding: 0;
-}
-
-a.brand {
-  color: var(--brandColor);
-  text-decoration: none;
-  /* padding-right: 30px; */
-  margin: 10px;
-  margin-right: 30px;
-}
-
-a.user{
-  color: whitesmoke;
-
-}
-a.admin{  
-  color: whitesmoke;
-}
-
-.nav-item {
-  color: var(--menuLinkColor);
-  text-decoration: none;
-  margin-right: 3%;
-}
-.nav-bar .welcome {
-
-}
-
-.dev-item {
-  color: var(--menuLinkColor);
-  text-decoration: none;
-  padding: 25px;
+.about-section button a {
+    color: #FFFFFF;
 }
 
 
-.welcome{
-  
-  margin-left:30%;
-  margin-right: 0;
+/* -------------login----------- */
+
+.login-section {
+    margin-top: 15%;
+    margin-left: 37%;
 }
 
-main {
-  margin: 10px;
-}
-.row{
-  border: 2px solid black;
-  margin: 0 30% 0 30%;
-  padding: 30px;
-  border-radius: 5px;
-  /* align-items: center; */
-  /* justify-content: center; */
-  background-color: rgb(212, 206, 206);
-}
-
-h2 {
-  text-align: center;
+.login-section button {
+    margin: 5% 16% 10% 10%;
+    cursor: pointer;
 }
 
 
-.form-group {
-  display: block;
-  margin: 5px;
+/* ---------------register------------- */
+
+.register-section {
+    margin-top: 10%;
+    margin-left: 35%;
+    margin-bottom: 5%;
 }
 
-.form-group > label {
-  display: block;
-  margin: 2px;
+.register-section button {
+    margin: 1% 17% 5% 8%;
+    cursor: pointer;
 }
 
-.form-control {
-  display: block;
+.register-section .home a {
+    color: #325B80;
 }
 
-.form-check-inline {
-  display: block;
+
+/* ------------------list train user--------------- */
+
+.list-train-user-section {
+    margin-top: 9%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 
-.form-check-input {
-  display: inline-block;
+.list-train-user-section .form-container button {
+    /* float: right; */
+    margin-top: 5%;
+    margin-left: 75%;
+    cursor: pointer;
 }
 
-table, th, td{
-  border:2px solid black;
-  border-collapse: collapse;
-  font-size: 15px;
-  
+.user-list-table caption {
+    margin-bottom: 1%;
+}
+
+.user-list-table button {
+    margin-top: 2%;
+    margin-left: 90%;
+    margin-bottom: 2%;
+}
+
+.list-train-user-section button a {
+    color: #FFFFFF;
+}
+
+
+/* --------------------booking----------------- */
+
+.booking {
+    margin-top: 10%;
+    margin-left: 37%;
+}
+
+.booking .row button {
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 10%;
+    cursor: pointer;
+}
+
+.booking-container .first-btn {
+    margin: 2% 5% 2% 42%;
+}
+
+.booking-container button a {
+    color: #FFFFFF;
+}
+
+
+/* --------------booking list----------- */
+
+.booking-list-section {
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.booking-list-section button {
+    margin-top: 2%;
+}
+
+.booking-list-section .first-btn {
+    margin-left: 81%;
+    margin-right: 2%;
+}
+
+.booking-list-section button a {
+    color: #FFFFFF;
+}
+
+.booking-list-section caption {
+    margin-bottom: 1%;
+}
+
+
+/* ----------------add train admin----------- */
+
+.add-train-admin-section {
+    margin-top: 10%;
+    margin-left: 37%;
+}
+
+.add-train-admin-section .row button {
+    margin-top: 10%;
+    margin-right: 16%;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+.add-train-admin-section button {
+    margin-top: 10%;
+    margin-left: 6%;
+    margin-right: 15%;
+}
+
+.add-train-admin-section button a {
+    color: #325B80;
+}
+
+
+/* -------------list train admin----------- */
+
+.list-train-admin-section {
+    margin-top: 9%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.list-train-admin-section .form-container button {
+    margin-top: 5%;
+    margin-left: 75%;
+    cursor: pointer;
+}
+
+.user-admin-table caption {
+    margin-bottom: 1%;
+}
+
+.user-admin-table .first-btn {
+    margin-top: 2%;
+    margin-left: 80%;
+    margin-bottom: 2%;
+    margin-right: 2%;
+}
+
+.list-train-admin-section .first-btn a {
+    color: #FFFFFF;
+}
+
+
+/* ----------------list user admin---------------- */
+
+.list-user-admin-section {
+    margin-top: 10%;
+    margin-left: 19%;
+}
+
+.list-user-admin-section caption {
+    margin-bottom: 1%;
+}
+
+
+/* ------------booking list admin-------------- */
+
+.booking-list-admin-section {
+    margin-top: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.booking-list-admin-section caption {
+    margin-bottom: 1%;
+}
+
+
+/* -------------------Edit train admin------------ */
+
+.edit-train-section {
+    margin-top: 10%;
+    margin-left: 41%;
+    margin-bottom: 2%;
+}
+
+.edit-train-section .first-btn {
+    margin-top: 10%;
+    margin-left: 30%;
+}
+
+.edit-train-section .second-btn {
+    margin-top: 5%;
+    margin-left: 25%;
+}
+
+.edit-train-section .second-btn a {
+    color: #FFFFFF;
 }

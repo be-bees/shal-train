@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/table.css">
+    <!-- <link rel="stylesheet" href="css/table.css"> -->
+    <link rel="stylesheet" href="css/style.css">
 
-     <!-- axios -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 </head>
@@ -20,14 +21,20 @@
         <!--append-->
     </header>
     <main>
-        <h2>List Trains</h2>
-        <div>
+        <section class="list-train-user-section">
 
-            <form onsubmit="abc()">
-           
-            <label for="sourceStationSearch"><strong>Source Station</strong></label>
-            <!-- <input type="text" name="sourceStationSearch" id="sourceStationSearch" autofocus required value='kerala'> -->
-            <select name="sourceStationSearch" id="sourceStationSearch" class="sourceStationSearch">
+            <div class="form-container">
+                <div class="form-title">
+                    <h2>List Trains</h2>
+                </div>
+
+                <div>
+
+                    <form onsubmit="abc()">
+
+                        <label for="sourceStationSearch"><strong>Source Station</strong></label>
+                        <!-- <input type="text" name="sourceStationSearch" id="sourceStationSearch" autofocus required value='kerala'> -->
+                        <select class="form-control" name="sourceStationSearch" id="sourceStationSearch" class="sourceStationSearch">
                 <!-- <option value="">Select a location...</option>
                 <option value="chengalpattu">Chengalpattu</option>
                 <option value="Chennai">Chennai</option>
@@ -43,9 +50,9 @@
                 <option value="kerala">Kerala</option> -->
             </select>
 
-            <label for="destinationStationSearch"><strong>Destination Station</strong></label>
-            <!-- <input type="text" name="destinationStationSearch" id="destinationStationSearch" value="chennai" required> -->
-            <select name="destinationStationSearch" id="destinationStationSearch" class="destinationStationSearch">
+                        <label for="destinationStationSearch"><strong>Destination Station</strong></label>
+                        <!-- <input type="text" name="destinationStationSearch" id="destinationStationSearch" value="chennai" required> -->
+                        <select class="form-control" name="destinationStationSearch" id="destinationStationSearch" class="destinationStationSearch">
                 <!-- <option value="">Select a location...</option>
                 <option value="chengalpattu">Chengalpattu</option>
                 <option value="chennai">Chennai</option>
@@ -60,44 +67,48 @@
                 <option value="mumbai">Mumbai</option>
                 <option value="kerala">Kerala</option> -->
             </select>
-            <button type="submit">Search</button>
-            </form>
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </form>
 
-        </div>
-        <br><br>
-        <section>
-            <table class="listTrain">
-                <caption><strong> Train List</strong></caption>
-                <thead>
-                    <tr>
-                        <th id="sno">S.No</th>
-                        <th id="trainNo">Train No</th>
-                        <th id="name">Train Name</th>
-                        <th id="noPassengers">No of passengers Allowed</th>
-                        <th id="source">Source Station</th>
-                        <th id="destnation">Destination Station</th>
-                        <th id="startTime">Start Time</th>
-                        <th id="endTime">End Time</th>
-                        <th id="duration">Duration</th>
-                        <th id="price">Ticket Price</th>
-                        <th id="stations">Stations</th>
-                        <th id="action">Actions</th>
-                    </tr>
-                </thead>
-                <tbody id="listTrainData">
-                   
-                    
-                </tbody>
-            </table>
-            <br>
-            <br>
-            <button><a href="index.html" style="text-decoration:none;">Home</a></button>
+                </div>
+            </div>
+            <br><br>
+            <section class="user-list-table">
+                <div style="overflow-x:auto;">
+                    <table class="table table-bordered  table-hover">
+                        <caption><strong> Train List</strong></caption>
+                        <thead>
+                            <tr class="table-primary">
+                                <th id="sno">S.No</th>
+                                <th id="trainNo">Train No</th>
+                                <th id="name">Train Name</th>
+                                <th id="noPassengers">No of passengers Allowed</th>
+                                <th id="source">Source Station</th>
+                                <th id="destnation">Destination Station</th>
+                                <th id="startTime">Start Time</th>
+                                <th id="endTime">End Time</th>
+                                <th id="duration">Duration</th>
+                                <th id="price">Ticket Price</th>
+                                <th id="stations">Stations</th>
+                                <th id="action">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listTrainData">
 
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <button class="btn btn-primary"><a href="index.html" style="text-decoration:none;">Home</a></button>
+
+            </section>
         </section>
     </main>
     <script src="js/jquery.min.js"></script>
     <script src="js/trainservice.js"></script>
-   
+
     <script src="js/list_train.js"></script>
 </body>
 

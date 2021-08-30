@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bookings</title>
-    
+    <link rel="stylesheet" href="css/style.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 </head>
@@ -14,48 +15,47 @@
 <body>
     <header id="header"></header>
     <main>
-        <h2>Bookings</h2>
-        <form onsubmit="bookingForm();">
-            <div class="row">
-                <label for="trainNo">Train No: </label>
-                <input type="number" name="trainNo" id="trainNo" pattern="[0-9]{5}" required autofocus>
-                <br />
-                <br />
-                <label for="trainName">Train Name: </label>
-                <input type="text" name="trainName" id="trainName" pattern="[A-Za-z ]{1,50}" required>
-                <br />
-                <br />
-                <label for="fromStation">From Station: </label>
-                <input type="text" name="fromStation" id="fromStation" pattern="[A-Za-z ]{1,50}" required>
-                <br />
-                <br />
-                <label for="toStation">To Station: </label>
-                <input type="text" name="toStation" id="toStation" pattern="[A-Za-z ]{1,50}" required>
-                <br />
-                <br />
-                <label for="noTicket">No of Tickets: </label>
-                <input type="number" name="noTicket" id="noTicket" required>
-                <br />
-                <br />
-                <label for="journeyDate">Journey Date: </label>
-                <input type="date" name="journeyDate" id="journeyDate" required>
-                <br />
-                <br />
-                <label for="ticketAmount">Ticket Amount: </label>
-                <input type="number" name="ticketAmount" id="ticketAmount" required>
-                <br />
-                <br />
-                <button>Submit</button>
-                <button type="reset">Reset</button>
+        <section class="booking-container">
+            <div class="form-container booking">
+                <div class="form-title">
+                    <h2>Bookings</h2>
+                </div>
+                <form onsubmit="bookingForm();">
+                    <div class="row">
+                        <label for="trainNo">Train No: </label>
+                        <input class="form-control" type="number" name="trainNo" id="trainNo" pattern="[0-9]{5}" required autofocus>
+
+                        <label for="trainName">Train Name: </label>
+                        <input class="form-control" type="text" name="trainName" id="trainName" pattern="[A-Za-z ]{1,50}" required>
+
+                        <label for="fromStation">From Station: </label>
+                        <input class="form-control" type="text" name="fromStation" id="fromStation" pattern="[A-Za-z ]{1,50}" required>
+
+                        <label for="toStation">To Station: </label>
+                        <input class="form-control" type="text" name="toStation" id="toStation" pattern="[A-Za-z ]{1,50}" required>
+
+                        <label for="noTicket">No of Tickets: </label>
+                        <input class="form-control" type="number" name="noTicket" id="noTicket" required>
+
+                        <label for="journeyDate">Journey Date: </label>
+                        <input class="form-control" type="date" name="journeyDate" id="journeyDate" required>
+
+                        <label for="ticketAmount">Ticket Amount: </label>
+                        <input class="form-control" type="number" name="ticketAmount" id="ticketAmount" required>
+
+                        <button class="btn btn-primary ">Submit</button>
+                        <button class="btn btn-success" type="reset">Reset</button>
+                    </div>
+                </form>
             </div>
-        </form><br><br>
-        <button class="form-btn"><a href="list_train_adm.html" style="text-decoration:none;">List Trains</a> </button>&nbsp;
-        <button><a href="index.html" style="text-decoration:none;">Home</a></button>
+            <button class="btn btn-primary first-btn"><a href="list_train_adm.html" style="text-decoration:none;">List Trains</a> </button>&nbsp;
+            <button class="btn btn-secondary"><a href="index.html" style="text-decoration:none;">Home</a></button>
+        </section>
 
         <script src="js/jquery.min.js"></script>
-        
-    <script src="js/bookservice.js"></script>
-    <script src="js/validator.js"></script>
+
+        <script src="js/bookservice.js"></script>
+        <script src="js/validator.js"></script>
         <script src="js/booking.js"></script>
 
     </main>

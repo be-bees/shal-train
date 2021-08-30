@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
-    
+    <link rel="stylesheet" href="css/style.css">
+
     <!-- axios -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -14,47 +15,53 @@
 
 <body>
     <header id="header"></header>
-    <h2>Registration with User Details</h2>
-
-    <form onsubmit="checkConf();">
-        
-        <div class="row">
-        <label for="email">Email: <span style="color:red">*</span></label>
-        <input type="email" name="email" id="email" placeholder="Enter Email" required autofocus pattern="[a-z0-9._]+@[a-z.]+\.[a-z]{2,3}$" autocomplete="off"><br />
-        <label for="password">Password: <span style="color:red">*</span></label>
-        <input type="password" name="password" id="password" placeholder="Enter Password" required><br />
-        <label for="confirmPassword">Confirm Password: <span style="color:red">*</span></label>
-        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter confirm Password" required><br />
-        <label for="role">Role: <span style="color:red">*</span></label>
-        <input type="radio" name="role" id="role" value="admin" required checked>Admin
-        <input type="radio" name="role" id="role" value="user">User<br />
-        <br />
-        <br />
-
-        <label><strong>Personal Details:</strong></label><br>
-
-        <label for="firstName">First Name: <span style="color:rgb(155, 44, 44)">*</span></label>
-        <input type="text" name="firstName" id="firstName" placeholder="Enter your Name" required pattern="[A-Za-z ]{1,32}"><br />
-        <label for="middleName">Middle Name: </label>
-        <input type="text" name="middleName" id="middleName" placeholder="Enter your Name" pattern="[A-Za-z ]{1,32}"> (Optional)<br />
-        <label for="lastName">Last Name: <span style="color:red">*</span></label>
-        <input type="text" name="lastName" id="lastName" placeholder="Enter your Name" required pattern="[A-Za-z ]{1,32}"><br />
-        <label for="gender">Gender: <span style="color:red">*</span></label>
-        <input type="radio" name="gender" id="gender" value="Female" required checked>Female
-        <input type="radio" name="gender" id="gender" value="Male">Male<br />
-        <label for="dob">DOB: <span style="color:red">*</span></label>
-        <input type="date" name="dob" id="dob" required> <br />
-
-        <label for="mobile">Mobile No: <span style="color:red">*</span></label>
-        <input type="number" name="mobile" id="mobile" placeholder="Enter your Mobile No" pattern="[6789][0-9]{9}" required> <br />
-        <br />
-        <button><a href="index.html" style="text-decoration:none;">Home</a></button>
-        <button>Submit</button>
+    <section class="register-section form-container">
+        <div class="form-title">
+            <h2>Registration with User Details</h2>
         </div>
-    </form>
+
+
+        <form onsubmit="checkConf();">
+
+            <div class="row">
+                <label for="email">Email: <span style="color:red">*</span></label>
+                <input class="form-control" type="email" name="email" id="email" placeholder="Enter Email" required autofocus pattern="[a-z0-9._]+@[a-z.]+\.[a-z]{2,3}$" autocomplete="off"><br />
+                <label for="password">Password: <span style="color:red">*</span></label>
+                <input class="form-control" type="password" name="password" id="password" placeholder="Enter Password" required><br />
+                <label for="confirmPassword">Confirm Password: <span style="color:red">*</span></label>
+                <input class="form-control" type="password" name="confirmPassword" id="confirmPassword" placeholder="Enter confirm Password" required><br />
+                <label for="role">Role: <span style="color:red">*</span></label>
+                <input type="radio" name="role" id="role" value="admin" required checked>Admin
+                <input type="radio" name="role" id="role" value="user">User<br />
+                <br />
+                <br />
+
+                <label><strong>Personal Details:</strong></label><br>
+
+                <label for="firstName">First Name: <span style="color:rgb(155, 44, 44)">*</span></label>
+                <input class="form-control" type="text" name="firstName" id="firstName" placeholder="Enter your Name" required pattern="[A-Za-z ]{1,32}"><br />
+                <label for="middleName">Middle Name(Optional): </label>
+                <input class="form-control" type="text" name="middleName" id="middleName" placeholder="Enter your Name" pattern="[A-Za-z ]{1,32}"> <br />
+                <label for="lastName">Last Name: <span style="color:red">*</span></label>
+                <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Enter your Name" required pattern="[A-Za-z ]{1,32}"><br />
+                <label for="gender">Gender: <span style="color:red">*</span></label>
+                <input type="radio" name="gender" id="gender" value="Female" required checked>Female
+                <input type="radio" name="gender" id="gender" value="Male">Male<br />
+                <label for="dob">DOB: <span style="color:red">*</span></label>
+                <input class="form-control" type="date" name="dob" id="dob" required> <br />
+
+                <label for="mobile">Mobile No: <span style="color:red">*</span></label>
+                <input class="form-control" type="number" name="mobile" id="mobile" placeholder="Enter your Mobile No" pattern="[6789][0-9]{9}" required> <br />
+                <br />
+                <button class="btn btn-primary">Submit</button>
+                <button class="btn btn-light home"><a  href="index.html" style="text-decoration:none;">Home</a></button>
+
+            </div>
+        </form>
+    </section>
 
     <script src="js/jquery.min.js"></script>
-   
+
 
     <script src="js/userservice.js"></script>
     <script src="js/validator.js"></script>
@@ -64,4 +71,5 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.10.6/dayjs.min.js" integrity="sha512-bwD3VD/j6ypSSnyjuaURidZksoVx3L1RPvTkleC48SbHCZsemT3VKMD39KknPnH728LLXVMTisESIBOAb5/W0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
 </html>
